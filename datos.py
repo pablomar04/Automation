@@ -52,7 +52,7 @@ d53 = ["X50K","X50K0000","5to servicio","27311","69028"]
 a11 = ["X030","X0300000","1er servicio","15030","45301"]
 a12 = ["X030","X0300000","1er servicio","15030","39871"]
 a21 = ["X20K","X20K0000","2do servicio","16700","59374"]
-a21 = ["X20K","X20K0000","2do servicio","16700","48440"]
+a22 = ["X20K","X20K0000","2do servicio","16700","48440"]
 a31 = ["X30K","X30K0000","3er servicio","27068","70702"]
 a32 = ["X30K","X30K0000","3er servicio","27068","75612"]
 a41 = ["X40K","X40K0000","4to servicio","13534","56033"]
@@ -65,16 +65,16 @@ a52 = ["X50K","X50K0000","5to servicio","15030","39871"]
 #NAFTA
 mon2 = ["X017","X017101N","2do servicio", "27068"]
 
-mon3 = ["X018","X018101N","3er servicio", ""]
-mon3up = ["X018","X018101N","3er servicio", ""]
+mon3 = ["X018","X018101N","3er servicio", "20301"]
+mon3up = ["X018","X018101N","3er servicio", "13534"]
 
 #DIESEL
-mod3 = ["X30K","X030101D","3er servicio",""]
-mod4 = ["X30K","X030101D","4to servicio",""]
+mod2 = ["X20K","X20K101D","2do servicio","16241"]
+mod3 = ["X30K","X30K101D","3er servicio","27068"]
 
 #AMAROK
-moa3 = ["X30K","X030101D","3er servicio","27068"]
-moa4 = ["X30K","X030101D","4to servicio",""]
+moa3 = ["X30K","X30K111D","3er servicio","27068"]
+moa4 = ["X40K","X40K111D","4to servicio","13534"]
 
 ###############################################
 
