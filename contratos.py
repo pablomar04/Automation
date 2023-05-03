@@ -12,7 +12,7 @@ def reclamar_contrato (reclamo):
     pyautogui.press('Tab')
     pyautogui.write(reclamo[0])
     pyautogui.press('Tab')
-    pyautogui.write('S-10')
+    pyautogui.write('S10')
     pyautogui.moveTo(50, 275, duration=1)
     pyautogui.click()
     pyautogui.write(reclamo[1])

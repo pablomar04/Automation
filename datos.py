@@ -62,8 +62,21 @@ a52 = ["X50K","X50K0000","5to servicio","15030","39871"]
 
 ##############################################
 #MANO DE OBRA BONIFICADA
+#NAFTA
+mon2 = ["X017","X017101N","2do servicio", "27068"]
 
+mon3 = ["X018","X018101N","3er servicio", ""]
+mon3up = ["X018","X018101N","3er servicio", ""]
 
+#DIESEL
+mod3 = ["X30K","X030101D","3er servicio",""]
+mod4 = ["X30K","X030101D","4to servicio",""]
+
+#AMAROK
+moa3 = ["X30K","X030101D","3er servicio","27068"]
+moa4 = ["X30K","X030101D","4to servicio",""]
+
+###############################################
 
 
 

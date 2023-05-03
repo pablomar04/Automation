@@ -1,13 +1,14 @@
-from datoscontratos import *
+from datos import *
 from contratos import *
 from manodeobrabonificada import *
 
 reclamo = ["orden","chasis","recepcion","kilometraje","reparacion",a31]
 
-def reclamar (reclamo):
-    reclamar_contrato(reclamo)
 
-reclamar(reclamo)
+reclamar_contrato(reclamo)
+#reclamar_manodeobra(reclamo)
+
+
 
 
 
