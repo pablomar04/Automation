@@ -11,7 +11,7 @@ def reclamar_manodeobra (reclamo):
     pyautogui.write('11M')
     pyautogui.moveTo(50, 275, duration=1)
     pyautogui.click()
-    pyautogui.write(reclamo[1])
+    pyautogui.write(reclamo[1],interval=0.2)
     pyautogui.press('Tab', presses=3)
     pyautogui.write(reclamo[2])
     pyautogui.press('Tab', presses=2)
