@@ -4,13 +4,12 @@ from manodeobrabonificada import *
 import tkinter
 
 ventana = tkinter.Tk()
-ventana.geometry("250x300")
+ventana.geometry("230x370")
 ventana.title('Auto-SAGA')
 
-#etiqueta = tkinter.Label(ventana, text="Auto-SAGA")
-#etiqueta.pack()
 def imprimir (cadena):
     print(cadena)
+
 def borrar ():   
     ordentexto.delete(0,'end')
     chasistexto.delete(0,'end')
@@ -18,7 +17,35 @@ def borrar ():
     kilometrajetexto.delete(0,'end')
     reparaciontexto.delete(0,'end')
     codigotexto.delete(0,'end')
+    errorlabel.config(text = "")
 
+def error():
+    errorlabel.config(text = "No existe código")
+
+def reclamar():
+    
+    orden_texto = ordentexto.get()
+    chasis_texto = chasistexto.get()
+    recepcion_texto = recepciontexto.get()
+    kilometraje_texto = kilometrajetexto.get()
+    reparacion_texto =kilometrajetexto.get()
+    codigo_texto = codigotexto.get()
+
+    reclamo = {
+        "orden":orden_texto,
+        "chasis":chasis_texto,
+        "recepcion":recepcion_texto,
+        "kilometraje":kilometraje_texto,
+        "reparacion":reparacion_texto,
+        "codigo":codigo_texto
+        }
+    
+    if reclamo["codigo"] in codigos_contratos:
+        reclamar_contrato(reclamo)
+    elif reclamo["codigo"] in codigos_mo:
+        reclamar_manodeobra(reclamo)
+    else:
+        error()
 ordenlabel = tkinter.Label(ventana, text='Orden')
 ordenlabel.pack()
 ordentexto = tkinter.Entry(ventana, justify = 'center')
@@ -44,32 +71,26 @@ reparacionlabel.pack()
 reparaciontexto = tkinter.Entry(ventana, justify = 'center')
 reparaciontexto.pack()
 
+
+
 codigolabel = tkinter.Label(ventana, text='Código')
 codigolabel.pack()
 codigotexto = tkinter.Entry(ventana, justify = 'center')
 codigotexto.pack()
+errorlabel = tkinter.Label(ventana)
+errorlabel.pack()
 
-botonreclamar = tkinter.Button(ventana, text='Reclamar', command= lambda: imprimir(codigotexto.get()))
+
+botonreclamar = tkinter.Button(ventana, text='Reclamar', command= reclamar)
 botonreclamar.pack()
 botonborrar = tkinter.Button(ventana, text='Borrar', command= borrar)
 botonborrar.pack()
 
-
-reclamo = {"orden":ordentexto,
-           "chasis":chasistexto,
-           "recepcion":recepciontexto,
-           "kilometraje":kilometrajetexto,
-           "reparacion":reparaciontexto,
-           "codigo":codigotexto}
-
+copyright = u"\u00A9"
+copyrightlabel = tkinter.Label(ventana, text=copyright + "Juan Pablo Marcovecchio")
+copyrightlabel.pack()
 
 ventana.mainloop()
-
-#reclamo = ["209568","8AWDW22H5PA014889","02.05.23","10003","02.05.23",a11]
-
-
-#reclamar_contrato(reclamo)
-#reclamar_manodeobra(reclamo)
 
 
 
