@@ -2,7 +2,7 @@ import pyautogui
 from datos import *
 
 def reclamar_contrato (reclamo):
-    pyautogui.moveTo(150, 200, duration=1) 
+    pyautogui.moveTo(150, 200, duration=0.5) 
     pyautogui.click()
     pyautogui.moveTo(150, 230) 
     pyautogui.click()
@@ -10,9 +10,9 @@ def reclamar_contrato (reclamo):
     pyautogui.write(reclamo["orden"])
     pyautogui.press('Tab')
     pyautogui.write('S10')
-    pyautogui.moveTo(50, 275, duration=1)
+    pyautogui.moveTo(50, 275, duration=0.5)
     pyautogui.click()
-    pyautogui.write(reclamo["chasis"], interval=0.1)
+    pyautogui.write(reclamo["chasis"], interval=0.05)
     pyautogui.press('Tab', presses=3)
     pyautogui.write(reclamo["recepcion"])
     pyautogui.press('Tab', presses=2)
@@ -32,16 +32,16 @@ def reclamar_contrato (reclamo):
     
     pyautogui.write(codigos_contratos[codigo][2])
     #CARGAR MANO DE OBRA
-    pyautogui.moveTo(400, 95, duration=1)
+    pyautogui.moveTo(400, 95, duration=0.5)
     pyautogui.click()
-    pyautogui.moveTo(1220, 120, duration=1)
+    pyautogui.moveTo(1220, 120, duration=0.5)
     pyautogui.click()
     pyautogui.write(codigos_contratos[codigo][1])
     pyautogui.press('enter')
     pyautogui.write(codigos_contratos[codigo][3])
     pyautogui.press('enter')
     #CARGAR MATERIAL
-    pyautogui.moveTo(1220, 525, duration=1)
+    pyautogui.moveTo(1220, 525, duration=0.5)
     pyautogui.click()
     pyautogui.write('MAT-OTROS')
     pyautogui.press('enter')
@@ -54,10 +54,10 @@ def reclamar_contrato (reclamo):
     pyautogui.write(codigos_contratos[codigo][4])
     pyautogui.press('enter')
     #MARCAR CAUSAL
-    pyautogui.moveTo(30, 565, duration=1)
+    pyautogui.moveTo(30, 565, duration=0.5)
     pyautogui.click()
     #COMPLETAR
-    pyautogui.moveTo(45, 60, duration=1)
+    pyautogui.moveTo(45, 60, duration=0.5)
     #pyautogui.click()           
 
 

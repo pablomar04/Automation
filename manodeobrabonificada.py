@@ -2,17 +2,17 @@ import pyautogui
 from datos import *
 
 def reclamar_manodeobra (reclamo):
-    pyautogui.moveTo(150, 200, duration=1) 
+    pyautogui.moveTo(150, 200, duration=0.5) 
     pyautogui.click()
-    pyautogui.moveTo(150, 230, duration=1) 
+    pyautogui.moveTo(150, 230, duration=0.5) 
     pyautogui.click()
     pyautogui.press('Tab')
     pyautogui.write(reclamo["orden"])
     pyautogui.press('Tab')
     pyautogui.write('11M')
-    pyautogui.moveTo(50, 275, duration=1)
+    pyautogui.moveTo(50, 275, duration=0.5)
     pyautogui.click()
-    pyautogui.write(reclamo["chasis"],interval=0.2)
+    pyautogui.write(reclamo["chasis"],interval=0.05)
     pyautogui.press('Tab', presses=3)
     pyautogui.write(reclamo["recepcion"])
     pyautogui.press('Tab', presses=2)
@@ -29,17 +29,17 @@ def reclamar_manodeobra (reclamo):
     pyautogui.press('Tab', presses=6)
     pyautogui.write(codigos_mo[codigo][2])
     #CARGAR MANO DE OBRA
-    pyautogui.moveTo(400, 95, duration=1)
+    pyautogui.moveTo(400, 95, duration=0.5)
     pyautogui.click()
-    pyautogui.moveTo(1220, 120, duration=1)
+    pyautogui.moveTo(1220, 120, duration=0.5)
     pyautogui.click()
     pyautogui.write(codigos_mo[codigo][1])
     pyautogui.press('enter')
     pyautogui.write(codigos_mo[codigo][3])
     pyautogui.press('enter')
-    pyautogui.moveTo(30, 170, duration=1)
+    pyautogui.moveTo(30, 170, duration=0.5)
     pyautogui.click()
-    pyautogui.moveTo(45, 60, duration=1)
+    pyautogui.moveTo(45, 60, duration=0.5)
     #pyautogui.click()
 
 

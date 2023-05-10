@@ -28,7 +28,7 @@ def reclamar():
     chasis_texto = chasistexto.get()
     recepcion_texto = recepciontexto.get()
     kilometraje_texto = kilometrajetexto.get()
-    reparacion_texto =kilometrajetexto.get()
+    reparacion_texto =reparaciontexto.get()
     codigo_texto = codigotexto.get()
 
     reclamo = {
