@@ -34,7 +34,7 @@ def reclamar_contrato (reclamo):
     pyautogui.press('Tab', presses=3)
 
     pyautogui.write('9AR')
-    pyautogui.press('Tab', presses=6)
+    pyautogui.press('Tab', presses=7)
     
     pyautogui.write(codigos_contratos[codigo][2])
     #CARGAR MANO DE OBRA
