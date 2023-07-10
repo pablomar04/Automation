@@ -3,9 +3,13 @@ from datos import *
 
 def reclamar_contrato (reclamo):
     
-    pyautogui.moveTo(150, 200, duration=0.5)
-    pyautogui.click() 
-   # pyautogui.click(pyautogui.locateCenterOnScreen('cc.png'))
+    #pyautogui.moveTo(150, 200, duration=0.5)
+    #pyautogui.click() 
+    position = pyautogui.locateCenterOnScreen('cc.png', confidence=0.7)
+    print(position)
+    pyautogui.moveTo(position)
+
+    pyautogui.click()
     pyautogui.moveTo(150, 230) 
     pyautogui.click()
     pyautogui.press('Tab')
