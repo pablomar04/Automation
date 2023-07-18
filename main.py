@@ -87,7 +87,7 @@ botonborrar = tkinter.Button(ventana, text='Borrar', command= borrar)
 botonborrar.pack()
 
 copyright = u"\u00A9"
-copyrightlabel = tkinter.Label(ventana, text=copyright + "Juan Pablo Marcovecchio")
+copyrightlabel = tkinter.Label(ventana, text=copyright + " Juan Pablo Marcovecchio")
 copyrightlabel.pack()
 
 ventana.mainloop()

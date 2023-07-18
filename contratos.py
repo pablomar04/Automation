@@ -6,7 +6,7 @@ def reclamar_contrato (reclamo):
     #pyautogui.moveTo(150, 200, duration=0.5)
     #pyautogui.click() 
     position = pyautogui.locateCenterOnScreen('cc.png', confidence=0.8)
-    pyautogui.click()
+    pyautogui.click(position)
     pyautogui.moveTo(150, 230) 
     pyautogui.click()
     pyautogui.press('Tab')
