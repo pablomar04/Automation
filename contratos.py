@@ -3,49 +3,63 @@ from datos import *
 
 def reclamar_contrato (reclamo):
     
-    #pyautogui.moveTo(150, 200, duration=0.5)
-    #pyautogui.click() 
     position = pyautogui.locateCenterOnScreen('cc.png', confidence=0.8)
     pyautogui.click(position)
-    pyautogui.moveTo(150, 230) 
-    pyautogui.click()
+    position = pyautogui.locateCenterOnScreen('numero.png', confidence=0.8)
+    pyautogui.click(position)
     pyautogui.press('Tab')
     pyautogui.write(reclamo["orden"])
     pyautogui.press('Tab')
     pyautogui.write('S10')
-    pyautogui.moveTo(50, 275, duration=0.5)
-    pyautogui.click()
+
+    position = pyautogui.locateCenterOnScreen('bastidor.png', confidence=0.8)
+    pyautogui.click(position)
+
     pyautogui.write(reclamo["chasis"], interval=0.05)
-    pyautogui.press('Tab', presses=3)
+
+    position = pyautogui.locateCenterOnScreen('recepcion.png', confidence=0.8)
+    pyautogui.click(position)
+
     pyautogui.write(reclamo["recepcion"])
     pyautogui.press('Tab', presses=2)
-
     pyautogui.write(reclamo["kilometraje"])
-    pyautogui.press('Tab', presses=4)
+
+    position = pyautogui.locateCenterOnScreen('at.png', confidence=0.8)
+    pyautogui.click(position)
+
     codigo = reclamo["codigo"]
+
     pyautogui.write(codigos_contratos[codigo][0])
     pyautogui.press('Tab')
     pyautogui.write('0010')
     pyautogui.press('Tab')
     pyautogui.write(reclamo["reparacion"])
-    pyautogui.press('Tab', presses=3)
+
+    position = pyautogui.locateCenterOnScreen('proveedor.png', confidence=0.8)
+    pyautogui.click(position)
 
     pyautogui.write('9AR')
-    pyautogui.press('Tab', presses=7)
+    
+    position = pyautogui.locateCenterOnScreen('comentarios.png', confidence=0.8)
+    pyautogui.click(position)
     
     pyautogui.write(codigos_contratos[codigo][2])
+
     #CARGAR MANO DE OBRA
-    pyautogui.moveTo(400, 95, duration=0.5)
-    pyautogui.click()
-    pyautogui.moveTo(1220, 120, duration=0.5)
-    pyautogui.click()
+    position = pyautogui.locateCenterOnScreen('tercero.png', confidence=0.8)
+    pyautogui.click(position)
+
+    position = pyautogui.locateCenterOnScreen('e1.png', confidence=0.8)
+    pyautogui.click(position)
+
     pyautogui.write(codigos_contratos[codigo][1])
     pyautogui.press('enter')
     pyautogui.write(codigos_contratos[codigo][3])
     pyautogui.press('enter')
     #CARGAR MATERIAL
-    pyautogui.moveTo(1220, 525, duration=0.5)
-    pyautogui.click()
+    position = pyautogui.locateCenterOnScreen('e2.png', confidence=0.8)
+    pyautogui.click(position)
+
     pyautogui.write('MAT-OTROS')
     pyautogui.press('enter')
     pyautogui.write('MATERIALES')
@@ -57,10 +71,11 @@ def reclamar_contrato (reclamo):
     pyautogui.write(codigos_contratos[codigo][4])
     pyautogui.press('enter')
     #MARCAR CAUSAL
-    pyautogui.moveTo(30, 565, duration=0.5)
-    pyautogui.click()
+    position = pyautogui.locateCenterOnScreen('causal1.png', confidence=0.9)
+    pyautogui.click(position)
     #COMPLETAR
-    pyautogui.moveTo(45, 60, duration=0.5)
-    #pyautogui.click()           
+    position = pyautogui.locateCenterOnScreen('completar.png', confidence=0.8)
+    pyautogui.moveTo(position)
+              
 
 

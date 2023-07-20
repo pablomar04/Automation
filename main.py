@@ -7,9 +7,6 @@ ventana = tkinter.Tk()
 ventana.geometry("230x370")
 ventana.title('Auto-SAGA')
 
-def imprimir (cadena):
-    print(cadena)
-
 def borrar ():   
     ordentexto.delete(0,'end')
     chasistexto.delete(0,'end')
@@ -46,6 +43,7 @@ def reclamar():
         reclamar_manodeobra(reclamo)
     else:
         error()
+
 ordenlabel = tkinter.Label(ventana, text='Orden')
 ordenlabel.pack()
 ordentexto = tkinter.Entry(ventana, justify = 'center')
