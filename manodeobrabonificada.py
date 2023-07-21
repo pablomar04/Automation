@@ -4,7 +4,7 @@ from datos import *
 def reclamar_manodeobra (reclamo):
     position = pyautogui.locateCenterOnScreen('cc.png', confidence=0.8)
     pyautogui.click(position)
-    position = pyautogui.locateCenterOnScreen('02044.png', confidence=0.8)
+    position = pyautogui.locateCenterOnScreen('numero.png', confidence=0.8)
     pyautogui.click(position)
     pyautogui.press('Tab')
     pyautogui.write(reclamo["orden"])
