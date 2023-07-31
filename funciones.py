@@ -29,7 +29,10 @@ def completar_hoja1(tipo, reclamo):
 
     codigo = reclamo["codigo"]
 
-    pyautogui.write(codigos_contratos[codigo][0])
+    if tipo == 'S10':
+        pyautogui.write(codigos_contratos[codigo][0])
+    elif tipo == '11M':
+        pyautogui.write(codigos_mo[codigo][0])
     pyautogui.press('Tab')
     pyautogui.write('0010')
     pyautogui.press('Tab')
@@ -43,4 +46,7 @@ def completar_hoja1(tipo, reclamo):
     position = pyautogui.locateCenterOnScreen('comentarios.png', confidence=0.8)
     pyautogui.click(position)
     
-    pyautogui.write(codigos_contratos[codigo][2])
+    if tipo == 'S10':
+        pyautogui.write(codigos_contratos[codigo][2])
+    elif tipo == '11M':
+        pyautogui.write(codigos_mo[codigo][2])
