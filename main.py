@@ -3,10 +3,6 @@ import contratos
 import manodeobrabonificada
 import tkinter
 
-ventana = tkinter.Tk()
-ventana.geometry("230x370")
-ventana.title('Auto-SAGA')
-
 def borrar ():   
     ordentexto.delete(0,'end')
     chasistexto.delete(0,'end')
@@ -44,6 +40,12 @@ def reclamar():
     else:
         error()
 
+
+
+ventana = tkinter.Tk()
+ventana.geometry("230x370")
+ventana.title('Auto-SAGA')
+
 ordenlabel = tkinter.Label(ventana, text='Orden')
 ordenlabel.pack()
 ordentexto = tkinter.Entry(ventana, justify = 'center')
@@ -69,15 +71,12 @@ reparacionlabel.pack()
 reparaciontexto = tkinter.Entry(ventana, justify = 'center')
 reparaciontexto.pack()
 
-
-
 codigolabel = tkinter.Label(ventana, text='Código')
 codigolabel.pack()
 codigotexto = tkinter.Entry(ventana, justify = 'center')
 codigotexto.pack()
 errorlabel = tkinter.Label(ventana)
 errorlabel.pack()
-
 
 botonreclamar = tkinter.Button(ventana, text='Reclamar', command= reclamar)
 botonreclamar.pack()

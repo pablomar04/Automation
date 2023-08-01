@@ -3,7 +3,7 @@ from datos import *
 from funciones import *
 
 def reclamar_manodeobra (reclamo):
-    completar_hoja1('11M', reclamo)
+    completar_datos_principales('11M', reclamo)
     #CARGAR MANO DE OBRA
     position = pyautogui.locateCenterOnScreen('tercero.png', confidence=0.8)
     pyautogui.click(position)
