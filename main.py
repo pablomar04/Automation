@@ -1,6 +1,6 @@
-from datos import *
-from contratos import *
-from manodeobrabonificada import *
+import datos
+import contratos
+import manodeobrabonificada
 import tkinter
 
 ventana = tkinter.Tk()
@@ -20,7 +20,7 @@ def error():
     errorlabel.config(text = "No existe código")
 
 def reclamar():
-    
+    #controlar que ninguno es vacio
     orden_texto = ordentexto.get()
     chasis_texto = chasistexto.get()
     recepcion_texto = recepciontexto.get()
@@ -37,10 +37,10 @@ def reclamar():
         "codigo":codigo_texto
         }
     
-    if reclamo["codigo"] in codigos_contratos:
-        reclamar_contrato(reclamo)
-    elif reclamo["codigo"] in codigos_mo:
-        reclamar_manodeobra(reclamo)
+    if reclamo["codigo"] in datos.codigos_contratos:
+        contratos.reclamar_contrato(reclamo)
+    elif reclamo["codigo"] in datos.codigos_mo:
+        manodeobrabonificada.reclamar_manodeobra(reclamo)
     else:
         error()
 
