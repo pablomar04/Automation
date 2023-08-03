@@ -53,7 +53,7 @@ class MyApp:
         
 
         copyright = u"\u00A9"
-        self.copyrightlabel = tk.Label(root, text=copyright + " Juan Pablo Marcovecchio")
+        self.copyrightlabel = tk.Label(root, text=copyright + " JPSOFT")
         self.copyrightlabel.pack(pady=10)
 
         self.update_timer()

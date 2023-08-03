@@ -3,11 +3,15 @@ from datos import *
 
 
 def completar_datos_principales(tipo, reclamo):
-    position = pyautogui.locateCenterOnScreen('img/cc.png', confidence=0.8)
+    
+    #position = pyautogui.locateCenterOnScreen('img/cc.png', confidence=0.8)
+    #pyautogui.click(position)
+    #position = pyautogui.locateCenterOnScreen('img/numero.png', confidence=0.8)
+    #pyautogui.click(position)
+    #pyautogui.press('Tab')
+
+    position = pyautogui.locateCenterOnScreen('img/n-reclamacion.png', confidence=0.8)
     pyautogui.click(position)
-    position = pyautogui.locateCenterOnScreen('img/numero.png', confidence=0.8)
-    pyautogui.click(position)
-    pyautogui.press('Tab')
     pyautogui.write(reclamo["orden"])
     pyautogui.press('Tab')
     pyautogui.write(tipo)
