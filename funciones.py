@@ -12,6 +12,7 @@ def completar_datos_principales(tipo, reclamo):
 
     position = pyautogui.locateCenterOnScreen('img/n-reclamacion.png', confidence=0.8)
     pyautogui.click(position)
+    
     pyautogui.write(reclamo["orden"])
     pyautogui.press('Tab')
     pyautogui.write(tipo)
