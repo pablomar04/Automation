@@ -70,17 +70,17 @@ codigos_contratos = {
 #MANO DE OBRA BONIFICADA
 codigos_mo = {
 #NAFTA
-"mon2" : ["X017","X017101N","2do servicio", "34836"],
-"mon3" : ["X018","X018101N","3er servicio", "26127"],
-"mon3up" : ["X018","X018101N","3er servicio", "17418"],
+"wn2" : ["X017","X017101N","2do servicio", "34836"],
+"wn3" : ["X018","X018101N","3er servicio", "26127"],
+"wn3up" : ["X018","X018101N","3er servicio", "17418"],
 
 #DIESEL
-"mod2" : ["X20K","X20K101D","2do servicio","20902"],
-"mod3" : ["X30K","X30K101D","3er servicio","34836"],
+"wd2" : ["X20K","X20K101D","2do servicio","20902"],
+"wd3" : ["X30K","X30K101D","3er servicio","34836"],
 
 #AMAROK
-"moa3" : ["X30K","X30K111D","3er servicio","34836"],
-"moa4" : ["X40K","X40K111D","4to servicio","17418"]
+"wa3" : ["X30K","X30K111D","3er servicio","34836"],
+"wa4" : ["X40K","X40K111D","4to servicio","17418"]
 }
 ###############################################
 
