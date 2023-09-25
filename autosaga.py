@@ -10,7 +10,7 @@ class MyApp:
         self.root.title("AutoSAGA")
         self.root.geometry("250x440")
         self.time_label = tk.Label(root, text="Tiempo restante: ")
-        self.target_date = datetime(2023, 9, 15, 23, 59, 59)  # Target date and time (adjust as needed)
+        self.target_date = datetime(2023, 10, 15, 23, 59, 59)  # Target date and time (adjust as needed)
         
         self.ordenlabel = tk.Label(root, text='Orden')
         self.ordenlabel.pack()
